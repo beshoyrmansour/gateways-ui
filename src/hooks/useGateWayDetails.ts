@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useQueries, useQuery } from 'react-query';
-import { AxiosError, AxiosResponse } from 'axios';
+import { useQueries } from 'react-query';
 import { fetchGatewayDetails, updateGateway } from '../api/gateways';
 import { Gateway } from '../types/Gateway'
 import { useParams } from 'react-router-dom';
@@ -12,10 +11,6 @@ const useGateWayDetails = () => {
   const [gatewayData, setgatewayData] = useState<Gateway>();
   const { [GATEWAY_DETAILS_SELECTOR]: gatewayId } = useParams()
 
-  // const gatewayQuery = useQuery<Promise<string | AxiosResponse<Gateway>>, AxiosError, AxiosResponse<Gateway>>(
-  //   [QUEY_KEYS.GATEWAY, gatewayId], () => fetchGatewayDetails(gatewayId || ''), {
-  //   enabled: Boolean(gatewayId)
-  // });
 
   const queries = useQueries([{
     queryKey: [QUEY_KEYS.GATEWAY, gatewayId],
@@ -31,8 +26,7 @@ const useGateWayDetails = () => {
     isLoading,
     isFetched,
     isSuccess,
-    isError,
-    refetch
+    isError
   } = queries[0]
 
   useEffect(() => {
