@@ -13,7 +13,7 @@ const GatwayCard = ({ gateway, actions }: Props) => {
 
 
   return (
-    <Paper elevation={3} style={{ position: 'relative' }}>
+    <Paper elevation={3} style={{ width: '100%' }}>
       <Grid container spacing={2} padding={2}>
         <>
           <Grid item xs={12} md={2} lg={4}>

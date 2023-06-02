@@ -41,8 +41,12 @@ const Details = () => {
     return (
       <Grid container spacing={1} gap={2}>
 
-        <Grid container columns={13} item xs={12} md={5} lg={5} columnSpacing={3} marginBottom={3} >
-          {gatewayData && <GatwayCard gateway={gatewayData} />}
+        <Grid container columns={13} xs={12} md={5} lg={5} marginBottom={3} >
+          {gatewayData &&
+            <Grid item xs={12} md={12} lg={12}>
+              <GatwayCard gateway={gatewayData} />
+            </Grid>
+          }
         </Grid>
         {gatewayData?.devices &&
           <Grid container xs={12} md={7} lg={7}>
