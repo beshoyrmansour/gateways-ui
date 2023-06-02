@@ -1,4 +1,5 @@
 export const GATEWAY_DETAILS_SELECTOR = 'gatewayId'
 export const QUEY_KEYS = {
-  GATEWAY: 'GATEWAY'
+  GATEWAY: 'GATEWAY',
+  UPDATE_GATEWAY: 'UPDATE_GATEWAY'
 }

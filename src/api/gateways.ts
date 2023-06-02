@@ -14,3 +14,11 @@ export const fetchGatewayDetails: (gatewayId: string) => Promise<AxiosResponse<G
     url: `/gateways/${gatewayId}`
   })
 }
+
+export const updateGateway: (gatewayId: string, gateway?: Gateway) => Promise<AxiosResponse<Gateway, any>> = (gatewayId, gateway) => {
+  return instance({
+    method: 'put',
+    url: `/gateways/${gatewayId}`,
+    data: { ...gateway }
+  })
+}
