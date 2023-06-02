@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
@@ -18,7 +18,6 @@ import Loader from '../components/Loader';
 const Details = () => {
   const [showAddNew, setShowAddNew] = useState(false)
   const {
-    error,
     isError,
     isLoading,
     isFetched,

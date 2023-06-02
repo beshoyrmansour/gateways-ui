@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useQuery } from 'react-query';
 import { AxiosError, AxiosResponse } from 'axios';
 import { fetchGateways } from '../api/gateways';
@@ -14,7 +14,7 @@ const useGateways = () => {
   const gatewaysQuery = useQuery<Promise<string | AxiosResponse<Array<Gateway>>>, AxiosError, AxiosResponse<Array<Gateway>>>(
     [QUEY_KEYS.GATEWAY], () => fetchGateways());
 
-  const { data, error, isLoading, isFetched, isSuccess, isError } = gatewaysQuery;
+  const { data, isLoading, isFetched, isSuccess, isError } = gatewaysQuery;
 
   useEffect(() => {
     if (isFetched && isSuccess) {
@@ -35,7 +35,6 @@ const useGateways = () => {
   }
 
   return {
-    error,
     isError,
     isLoading,
     isFetched,

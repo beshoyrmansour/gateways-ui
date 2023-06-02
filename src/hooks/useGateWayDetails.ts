@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useQuery } from 'react-query';
 import { AxiosError, AxiosResponse } from 'axios';
 import { fetchGatewayDetails } from '../api/gateways';
@@ -19,7 +19,6 @@ const useGateWayDetails = () => {
 
   const {
     data,
-    error,
     isLoading,
     isFetched,
     isSuccess,
@@ -56,7 +55,6 @@ const useGateWayDetails = () => {
   }
 
   return {
-    error,
     isError,
     isLoading,
     isFetched,

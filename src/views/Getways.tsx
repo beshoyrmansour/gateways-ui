@@ -1,4 +1,3 @@
-import React from 'react';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 
@@ -9,7 +8,6 @@ import Loader from '../components/Loader';
 
 const Getways = () => {
   const {
-    error,
     isError,
     isLoading,
     isFetched,

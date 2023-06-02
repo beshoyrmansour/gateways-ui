@@ -1,19 +1,26 @@
-import React, { Suspense, lazy } from "react";
+import { Suspense, lazy } from "react";
 import { useRoutes, RouteObject } from "react-router-dom";
 import Loader from "../components/Loader";
 import { Paths } from "./paths";
 
-const Home = lazy(() => import("../views/Getways"));
-const Details = lazy(() => import("../views/Details"));
+const Home = lazy(() => import("../views/Getways").then()) || null;
+const Details = lazy(() => import("../views/Details").then()) || null;
 
 const routes: RouteObject[] = [
   {
     path: Paths.HOME,
-    element: <Home />,
+    element:
+
+      <Suspense fallback={<Loader />}>
+        <Home />
+      </Suspense>
   },
   {
     path: Paths.GETWAY_DETAILS,
-    element: <Details />,
+    element:
+      <Suspense fallback={<Loader />}>
+        <Details />
+      </Suspense>
   },
   {
     path: "*",
