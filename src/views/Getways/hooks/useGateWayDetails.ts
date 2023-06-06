@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 import { useQueries } from 'react-query';
-import { fetchGatewayDetails, updateGateway } from '../api/gateways';
-import { Gateway } from '../types/Gateway'
+import { fetchGatewayDetails, updateGateway } from '../../../api/gateways';
+import { Gateway } from '../../../types/Gateway'
 import { useParams } from 'react-router-dom';
-import { GATEWAY_DETAILS_SELECTOR, QUEY_KEYS } from '../shared/constants';
-import { Device } from '../types/Device';
+import { GATEWAY_DETAILS_SELECTOR, QUEY_KEYS } from '../../../shared/constants';
+import { Device } from '../../../types/Device';
 
 
 const useGateWayDetails = () => {

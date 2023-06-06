@@ -1,10 +1,10 @@
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 
-import { Gateway } from '../types/Gateway'
-import useGateways from '../hooks/useGateways'
-import GatwayCard from '../components/GatwayCard';
-import Loader from '../components/Loader';
+import { Gateway } from '../../types/Gateway'
+import useGateways from '../Details/hooks/useGateways'
+import GatwayCard from './components/GatwayCard';
+import Loader from '../../components/Loader';
 
 const Getways = () => {
   const {

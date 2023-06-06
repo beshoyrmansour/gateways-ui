@@ -4,8 +4,8 @@ import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import RouterIcon from '@mui/icons-material/Router';
 
-import { GateWayAction, Gateway } from '../types/Gateway'
-import { formatDate } from '../shared/utils';
+import { GateWayAction, Gateway } from '../../../../types/Gateway'
+import { formatDate } from '../../../../shared/utils';
 
 type Props = { gateway: Gateway, actions?: Array<GateWayAction> }
 

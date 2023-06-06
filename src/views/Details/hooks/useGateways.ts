@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
 import { useQuery } from 'react-query';
 import { AxiosError, AxiosResponse } from 'axios';
-import { fetchGateways } from '../api/gateways';
-import { Gateway } from '../types/Gateway'
+import { fetchGateways } from '../../../api/gateways';
+import { Gateway } from '../../../types/Gateway'
 import { useNavigate } from 'react-router-dom';
-import { Paths } from '../router/paths';
-import { GATEWAY_DETAILS_SELECTOR, QUEY_KEYS } from '../shared/constants';
+import { Paths } from '../../../router/paths';
+import { GATEWAY_DETAILS_SELECTOR, QUEY_KEYS } from '../../../shared/constants';
 
 
 const useGateways = () => {

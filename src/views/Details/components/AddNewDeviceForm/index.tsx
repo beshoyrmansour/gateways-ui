@@ -6,8 +6,8 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import InputAdornment from '@mui/material/InputAdornment';
 
-import { Gateway } from '../types/Gateway'
-import { Device, DeviceStatus } from '../types/Device';
+import { Gateway } from '../../../../types/Gateway'
+import { Device, DeviceStatus } from '../../../../types/Device';
 
 type Props = {
   gateway: Gateway,

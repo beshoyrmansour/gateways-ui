@@ -9,8 +9,8 @@ import WifiTetheringIcon from '@mui/icons-material/WifiTethering';
 import WifiTetheringOffIcon from '@mui/icons-material/WifiTetheringOff';
 import IconButton from '@mui/material/IconButton';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
-import { Device, DeviceStatus } from '../types/Device'
-import { formatDate } from '../shared/utils';
+import { Device, DeviceStatus } from '../../../../types/Device'
+import { formatDate } from '../../../../shared/utils';
 
 type Props = {
   device: Device,

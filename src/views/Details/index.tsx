@@ -6,13 +6,13 @@ import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 
-import { Gateway } from '../types/Gateway'
-import useGateWayDetails from '../hooks/useGateWayDetails'
-import { Device } from '../types/Device';
-import DeviceCard from '../components/DeviceCard';
-import GatwayCard from '../components/GatwayCard';
-import AddNewDeviceForm from '../components/AddNewDeviceForm';
-import Loader from '../components/Loader';
+import { Gateway } from '../../types/Gateway'
+import useGateWayDetails from '../Getways/hooks/useGateWayDetails'
+import { Device } from '../../types/Device';
+import DeviceCard from '../../components/DeviceCard';
+import GatwayCard from '../../components/GatwayCard';
+import AddNewDeviceForm from './components/AddNewDeviceForm';
+import Loader from '../../components/Loader';
 
 
 const Details = () => {
